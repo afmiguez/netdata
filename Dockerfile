@@ -8,13 +8,13 @@ RUN apk --no-cache add alpine-sdk autoconf automake libmnl-dev build-base jq \
                        netcat-openbsd
 
 # Copy source
-COPY . /opt/netdata.git
-WORKDIR /opt/netdata.git
+COPY netdata-installer.sh /opt/netdata-installer.sh
+
 
 # Install source
-RUN chmod +x ./netdata-installer.sh && \
+RUN chmod +x /opt/netdata-installer.sh && \
     sync && sleep 1 && \
-    ./netdata-installer.sh --dont-wait --dont-start-it
+    /opt/netdata-installer.sh --dont-wait --dont-start-it
 
 ################################################################################
 FROM alpine:edge
