@@ -39,12 +39,7 @@ cd "${netdata_source_dir}" || exit 1
 # -----------------------------------------------------------------------------
 # load the required functions
 
-if [ -f "${installer_dir}/functions.sh" ]
-    then
-    source "${installer_dir}/functions.sh" || exit 1
-else
-    source "${netdata_source_dir}/functions.sh" || exit 1
-fi
+source "./functions.sh" || exit 1
 
 # make sure we save all commands we run
 run_logfile="netdata-installer.log"
