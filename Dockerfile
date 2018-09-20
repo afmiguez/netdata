@@ -9,7 +9,7 @@ RUN apk --no-cache add alpine-sdk autoconf automake libmnl-dev build-base jq \
 
 # Copy source
 COPY netdata-installer.sh ./netdata-installer.sh
-
+COPY functions.sh ./functions.sh
 
 # Install source
 RUN chmod +x ./netdata-installer.sh && \
