@@ -39,11 +39,11 @@ cd "${netdata_source_dir}" || exit 1
 # -----------------------------------------------------------------------------
 # load the required functions
 
-if [ -f "${installer_dir}/installer/functions.sh" ]
+if [ -f "${installer_dir}/functions.sh" ]
     then
-    source "${installer_dir}/installer/functions.sh" || exit 1
+    source "${installer_dir}/functions.sh" || exit 1
 else
-    source "${netdata_source_dir}/installer/functions.sh" || exit 1
+    source "${netdata_source_dir}/functions.sh" || exit 1
 fi
 
 # make sure we save all commands we run
