@@ -3,9 +3,9 @@ FROM alpine:edge as builder
 
 # Install prerequisites
 RUN apk --no-cache add alpine-sdk autoconf automake libmnl-dev build-base jq \
-                       lm_sensors nodejs pkgconfig py-mysqldb python libuuid \
-                       py-psycopg2 py-yaml util-linux-dev zlib-dev curl bash \
-                       netcat-openbsd
+                       lm_sensors nodejs pkgconfig py-mysqldb python libuuid-devel \
+                       py-psycopg2 py-yaml util-linux-dev zlib-devel curl bash \
+                       netcat-openbsd autopoint libtool pkg-config
 
 # Copy source
 COPY netdata-installer.sh ./netdata-installer.sh
